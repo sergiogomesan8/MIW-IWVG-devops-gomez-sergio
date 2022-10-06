@@ -17,9 +17,9 @@ public class Searches {
                 .reduce(Fraction::subtract).orElse(new Fraction(0, 0));
     }
 
-    public Double findFirstDecimalFractionByUserName(String name) {
+    public Double findFirstDecimalFractionByUserName(String username) {
         return new UsersDatabase().findAll()
-                .filter(user -> user.getName().equals(name))
+                .filter(user -> user.getName().equals(username))
                 .flatMap(user -> user.getFractions().stream())
                 .map(Fraction::decimal).findFirst().orElse(null);
     }
