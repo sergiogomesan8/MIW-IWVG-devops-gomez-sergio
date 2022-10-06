@@ -21,4 +21,10 @@ class SearchesTest {
         assertEquals(60, new Searches().findFractionSubtractionByUserName("Ana").getDenominator());
     }
 
+    @Test
+    void testFindFirstDecimalFractionByUserName() {
+        assertEquals(0, new Searches().findFirstDecimalFractionByUserName("Antonio"));
+        assertEquals(2, new Searches().findFirstDecimalFractionByUserName("Ana"));
+    }
+
 }
