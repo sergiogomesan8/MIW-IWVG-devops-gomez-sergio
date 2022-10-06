@@ -70,6 +70,10 @@ public class Fraction {
         return (inputFraction.numerator * this.denominator == inputFraction.denominator * this.numerator);
     }
 
+    public Fraction subtract(Fraction fraction) {
+        return new Fraction(numerator * fraction.getDenominator() - fraction.getNumerator() * denominator, denominator * fraction.getDenominator());
+    }
+    
     @Override
     public String toString() {
         return "Fraction{" +

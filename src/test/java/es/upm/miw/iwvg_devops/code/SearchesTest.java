@@ -15,4 +15,10 @@ class SearchesTest {
                 new Searches().findUserFamilyNameBySomeImproperFraction().collect(Collectors.toList()));
     }
 
+    @Test
+    void testFindFractionSubtractionByUserName() {
+        assertEquals(22, new Searches().findFractionSubtractionByUserName("Ana").getNumerator());
+        assertEquals(60, new Searches().findFractionSubtractionByUserName("Ana").getDenominator());
+    }
+
 }
