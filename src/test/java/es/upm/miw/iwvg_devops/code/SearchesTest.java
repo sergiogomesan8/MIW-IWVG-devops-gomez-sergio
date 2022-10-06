@@ -27,4 +27,10 @@ class SearchesTest {
         assertEquals(2, new Searches().findFirstDecimalFractionByUserName("Ana"));
     }
 
+    @Test
+    void testFindUserNameBySomeImproperFraction() {
+        assertEquals(List.of("Oscar", "Ana", "Oscar", "Paula", "Antonio", "Paula"), new Searches().findUserNameBySomeImproperFraction()
+                .collect(Collectors.toList()));
+    }
+
 }
